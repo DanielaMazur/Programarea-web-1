@@ -1,1 +1,318 @@
 /* add your CSS here */
+body {
+  margin: 0;
+  font-family: "Monda", sans-serif;
+}
+
+#menuToggle {
+  display: none;
+}
+
+.header-section {
+  background-color: #e0e0e0;
+  display: flex;
+  position: relative;
+}
+
+.info-container {
+  flex: 8;
+  margin: 0 7% 0 15%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.title-img {
+  margin: auto;
+  width: 35%;
+  position: relative;
+  z-index: 1;
+}
+
+.title-shadow {
+  position: absolute;
+  position: absolute;
+  top: 31%;
+  left: 60%;
+  width: 35%;
+}
+
+.image-container {
+  flex: 2;
+  object-fit: contain;
+}
+
+.paper-tear-img {
+  height: 100%;
+  position: absolute;
+  top: -25%;
+  left: -16%;
+}
+
+.grunge-img {
+  position: absolute;
+  height: 40%;
+  left: 15%;
+  top: -15%;
+}
+
+.arrow-img {
+  position: absolute;
+  top: 80%;
+  width: 5%;
+}
+
+.navbar {
+  margin-top: 100px;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.ribbons-container {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.ribbon {
+  text-transform: uppercase;
+  color: white;
+  padding: 0 5px;
+  width: fit-content;
+}
+
+.ribbon p {
+  margin: 0;
+}
+
+.primary-ribbon {
+  background-color: #9913e1;
+  transform: rotate(-4deg);
+  margin-left: 150px;
+}
+
+.secondary-ribbon {
+  background-color: black;
+  transform: rotate(-6deg);
+}
+
+.navbar ul {
+  display: flex;
+  margin: 0px;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-left: 50px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.navbar ul li .active {
+  color: #9913e1;
+  font-weight: bold;
+}
+
+.header-description {
+  text-align: center;
+  max-width: 480px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.primary-text {
+  color: #9913e1;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* XX-Large devices (larger desktops, 1400px and down) */
+@media (max-width: 1400px) {
+}
+
+/* X-Large devices (large desktops, 1200px and down) */
+@media (max-width: 1200px) {
+}
+
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+  .image-container {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar img {
+    margin-left: auto;
+  }
+
+  .info-container {
+    margin: 0 7%;
+  }
+
+  .paper-tear-img {
+    left: -23%;
+  }
+
+  /* mobile menu styles */
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 25px;
+    left: 25px;
+
+    z-index: 10;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    width: 100vw;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+  /* end of mobile menu styles */
+}
+
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+  p {
+    font-size: 13px;
+  }
+
+  .grunge-img {
+    width: 30%;
+  }
+  .paper-tear-img {
+    left: -30%;
+  }
+  .navbar {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .arrow-img {
+    display: none;
+  }
+  .title-shadow {
+    display: none;
+  }
+}
