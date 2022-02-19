@@ -170,6 +170,8 @@ body {
 
 .reserve-tickets-info-section {
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .reserve-tickets-vertical-image {
@@ -187,6 +189,7 @@ body {
 
 .reserve-tickets-info {
   padding: 40px;
+  padding-bottom: 300px;
   z-index: 2;
   position: relative;
 }
@@ -229,6 +232,20 @@ body {
   top: -105px;
   width: 642px;
   z-index: -1;
+}
+
+.image-slide-container {
+  display: flex;
+  position: absolute;
+  right: -60px;
+  bottom: 60px;
+}
+
+.image-slide-container img {
+  width: 250px;
+  object-fit: cover;
+  height: 150px;
+  margin-left: 10px;
 }
 
 /* XX-Large devices (larger desktops, 1400px and down) */
