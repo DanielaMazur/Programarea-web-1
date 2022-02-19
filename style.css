@@ -40,8 +40,11 @@ body {
 }
 
 .image-container {
-  flex: 2;
+  flex: 3;
   object-fit: contain;
+  background-image: url("assets/artist.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .paper-tear-img {
@@ -138,6 +141,94 @@ body {
 
 .bold {
   font-weight: bold;
+}
+
+/* Reserve tickets */
+
+.reserve-tickets-section {
+  background-color: #e0e0e0;
+}
+
+.reserve-tickets-images-container {
+  display: flex;
+  height: 200px;
+}
+
+.reserve-tickets-image-big {
+  flex: 7;
+  background-image: url("assets/artist-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reserve-tickets-image-small {
+  flex: 3;
+  background-image: url("assets/artist-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reserve-tickets-info-section {
+  display: flex;
+}
+
+.reserve-tickets-vertical-image {
+  flex: 3;
+  background-image: url("assets/artist-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reserve-tickets-info-container {
+  flex: 7;
+  position: relative;
+  overflow: hidden;
+}
+
+.reserve-tickets-info {
+  padding: 40px;
+  z-index: 2;
+  position: relative;
+}
+
+.reserve-tickets-header {
+  font-size: 60px;
+  font-weight: bold;
+  position: relative;
+}
+
+.reserve-tickets-info-cards-container {
+  display: flex;
+}
+
+.reserve-tickets-info-card {
+  margin-right: 30px;
+}
+
+.reserve-tickets-info-card p {
+  line-height: 1.2;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.reserve-tickets-button {
+  background-color: transparent;
+  border-radius: 20px;
+  border: 3px #9913e1 solid;
+  padding: 10px 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.reserve-tickets-background {
+  position: absolute;
+  right: -192px;
+  top: -105px;
+  width: 642px;
+  z-index: -1;
 }
 
 /* XX-Large devices (larger desktops, 1400px and down) */
@@ -265,6 +356,7 @@ body {
   #menu {
     position: absolute;
     width: 100vw;
+    height: 100vh;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
@@ -291,6 +383,14 @@ body {
   }
 
   /* end of mobile menu styles */
+
+  .reserve-tickets-image-small,
+  .reserve-tickets-vertical-image {
+    flex: 0;
+  }
+  .reserve-tickets-header {
+    font-size: 46px;
+  }
 }
 
 /* Small devices (landscape phones, 576px and down) */
@@ -314,5 +414,21 @@ body {
   }
   .title-shadow {
     display: none;
+  }
+
+  .reserve-tickets-header {
+    font-size: 30px;
+  }
+
+  .reserve-tickets-background {
+    display: none;
+  }
+
+  .reserve-tickets-info-cards-container {
+    flex-direction: column;
+  }
+
+  .reserve-tickets-info-card {
+    margin: 10px 0;
   }
 }
