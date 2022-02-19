@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: "Monda", sans-serif;
+  background-color: #e0e0e0;
 }
 
 #menuToggle {
@@ -9,7 +10,6 @@ body {
 }
 
 .header-section {
-  background-color: #e0e0e0;
   display: flex;
   position: relative;
 }
@@ -145,10 +145,6 @@ body {
 
 /* Reserve tickets */
 
-.reserve-tickets-section {
-  background-color: #e0e0e0;
-}
-
 .reserve-tickets-images-container {
   display: flex;
   height: 200px;
@@ -216,7 +212,7 @@ body {
   text-align: justify;
 }
 
-.reserve-tickets-button {
+.button {
   background-color: transparent;
   border-radius: 20px;
   border: 3px #9913e1 solid;
@@ -246,6 +242,45 @@ body {
   object-fit: cover;
   height: 150px;
   margin-left: 10px;
+}
+
+/* footer */
+
+footer {
+  padding: 100px 60px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  margin: 0 10px;
+}
+
+.footer-grunge-background {
+  position: absolute;
+  z-index: -1;
+  bottom: -301px;
+  left: -43px;
+  width: 250px;
+}
+
+.footer-tear-background {
+  position: absolute;
+  z-index: -1;
+  width: 700px;
+  right: -300px;
+  bottom: -216px;
+}
+
+.footer-column {
+  margin: 0 10px;
+}
+
+.footer-logo {
+  margin-bottom: auto;
 }
 
 /* XX-Large devices (larger desktops, 1400px and down) */
@@ -447,5 +482,9 @@ body {
 
   .reserve-tickets-info-card {
     margin: 10px 0;
+  }
+
+  footer {
+    padding: 50px 40px 150px;
   }
 }
